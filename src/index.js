@@ -1,12 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './app';
 
-const name = 'React';
-const element = (
-  <div>
-    <h1>Hello {name}</h1>
-    <h2>现在是 {new Date().toLocaleString()}</h2>
-  </div>
-);
-ReactDOM.render(element, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
 
