@@ -1,0 +1,53 @@
+<!--
+ * @file 
+ * @version 0.0.1
+ * @author 冉娃娃 <274544338@qq.com>
+ * @since 2020/7/23 8:24
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>vue-router</title>
+</head>
+<body>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+
+<div id="app">
+  <h1>HELLO WORLD</h1>
+  <div>
+    <!-- 路由导航 -->
+    <router-link to="/foo">go to foo</router-link>
+    <router-link to="/bar">go to bar</router-link>
+  </div>
+  <div>
+    <!-- 路由出口 -->
+    <router-view />
+  </div>
+</div>
+
+<script>
+/* 创建组件 */
+const Foo = { template: `<div>foo</div>` };
+const Bar = { template: `<div>bar</div>` };
+
+/* 定义路由表 */
+const routes = [
+  { path: '/foo', component: Foo, },
+  { path: '/bar', component: Bar, },
+]
+
+/* 实例化路由 */
+const router = new VueRouter({
+  routes
+})
+
+/* 实例化vue */
+const vm = new Vue({
+  el: '#app',
+  router,
+});
+</script>
+</body>
+</html>

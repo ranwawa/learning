@@ -17,8 +17,13 @@
 <div id="app">
   <div>
     <!-- 路由导航 -->
-    <router-link to="/foo">go to foo</router-link>
-    <router-link to="/bar">go to bar</router-link>
+    <router-link to="/user/name/foo/age/15">
+      to /user/name/foo/age/15
+    </router-link>
+    <br>
+    <router-link to="/user/name/bar/age/33">
+      to/user/name/bar/age/33
+    </router-link>
   </div>
   <div>
     <!-- 路由出口 -->
@@ -28,13 +33,27 @@
 
 <script>
 /* 创建组件 */
-const Foo = { template: `<div>foo</div>` };
-const Bar = { template: `<div>bar</div>` };
+const User = {
+  template:
+    `<div>User name: {{ $route.params.name }} <br> User age: {{ $route.params.age }}</div>`,
+  created() {
+    console.log('动态路由钩子只会触发一次');
+  },
+  beforeRouteUpdate(to, from, next) {
+    console.log('beforeRouteUpdate', to);
+    /* 必须调用next函数 */
+    next();
+  },
+  watch: {
+    $route(to, from) {
+      console.log('watch $route', to, from);
+    },
+  },
+};
 
 /* 定义路由表 */
 const routes = [
-  { path: '/foo', component: Foo, },
-  { path: '/bar', component: Bar, },
+  { path: '/user/name/:name/age/:age', component: User, },
 ]
 
 /* 实例化路由 */
