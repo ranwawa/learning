@@ -1,0 +1,82 @@
+<!--
+ * @file 
+ * @version 0.0.1
+ * @author 冉娃娃 <274544338@qq.com>
+ * @since 2020/7/28 23:16
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="https://unpkg.com/vue/dist/vue.js"></script>
+  <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+</head>
+<body>
+<div id="app">
+  <router-view />
+</div>
+<script>
+const User = {
+  template: `
+  <div>
+    User {{ $route.params.id }}
+    <router-view />
+  </div>
+`
+}
+
+const UserProfile = {
+  template: `
+    <div>
+      -------
+      <br>
+      Profile
+      <br>
+      -------
+    </div>
+  `
+}
+
+const RootPath = {
+  template: `
+    <div>
+    root path in nested route
+    </div>
+  `,
+};
+
+const UserEmpty = {
+  template: `
+    <div>
+    ......
+      <br>
+      empty
+      <br>
+    ......
+    </div>
+  `
+}
+
+const router = new VueRouter({
+  routes: [
+    {
+      path: '/user/:id',
+      component: User,
+      children: [
+        // router-view的默认组件
+        { path: '', component: UserEmpty },
+        { path: 'profile', component: UserProfile },
+        { path: '/xxx', component: RootPath },
+      ]
+    },
+  ]
+});
+
+const vm = new Vue({
+  el: '#app',
+  router,
+});
+</script>
+</body>
+</html>
