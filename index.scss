@@ -1,0 +1,26 @@
+/**
+ * @file 学习source map
+ * 官网: https://sass-lang.com/
+ * 1. 全局安装sass npm install -g sass
+ * 2. 生成css文件及source map文件 sass --embed-source-map index.scss index.css
+ * @version 0.0.1
+ * @author 冉娃娃 <274544338@qq.com>
+ * @since 2020/8/6 8:30
+ */
+
+.map {
+	color: #333;
+	&__title {
+		font-size: 22px;
+	}
+	&__founder {
+		font-size: 18px;
+	}
+	&__supporter {
+		font-size: 14px;
+	}
+	&__footer {
+		color: #999;
+		font-size: 12px;
+	}
+}
