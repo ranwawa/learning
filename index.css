@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/**
+ * @file 学习source map
+ * 官网: https://sass-lang.com/
+ * 1. 全局安装sass npm install -g sass
+ * 2. 生成css文件及source map文件 sass --embed-source-map index.scss index.css
+ * @version 0.0.1
+ * @author 冉娃娃 <274544338@qq.com>
+ * @since 2020/8/6 8:30
+ */
+.map {
+  color: #333;
+}
+.map__title {
+  font-size: 22px;
+}
+.map__founder {
+  font-size: 18px;
+}
+.map__supporter {
+  font-size: 14px;
+}
+.map__footer {
+  color: #999;
+  font-size: 12px;
+}
+
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22index.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%22;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAAA;AAUA;EACC;;AACA;EACC;;AAED;EACC;;AAED;EACC;;AAED;EACC;EACA%22,%22file%22:%22index.css%22%7D */
