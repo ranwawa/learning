@@ -1,5 +1,6 @@
 import React from "react";
-import FormDemo from './FormDemo';
+import Calculator from './StateDemo/Calculator';
+// import FormDemo from './FormDemo';
 // import RefAndDom from './RefAndDom';
 // import KeyDemo from './KeyDemo';
 // import IfDemo from './IfDemo';
@@ -21,7 +22,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <FormDemo />
+        <Calculator />
+        {/*<FormDemo />*/}
         {/*<RefAndDom />*/}
         {/*<KeyDemo />*/}
         {/*<IfDemo />*/}
