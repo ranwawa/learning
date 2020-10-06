@@ -1,5 +1,7 @@
 import React from "react";
-import LifecircleComponent from "./lifecircleComponent";
+// import LifecircleComponent from "./lifecircleComponent";
+import SetStateDemo from './setStateDemo';
+// import StateComponent from './StateComponent';
 export default class App extends React.Component {
   constructor() {
     super();
@@ -15,8 +17,9 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <LifecircleComponent title={this.state.title} />
-        <div onClick={this.handleClickProps}>修改标题</div>
+        {/*<LifecircleComponent title={this.state.title} />*/}
+        {/*<div onClick={this.handleClickProps}>修改标题</div>*/}
+        <SetStateDemo />
       </div>
     );
   }
