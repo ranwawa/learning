@@ -1,5 +1,6 @@
 import React from "react";
-import KeyDemo from './KeyDemo';
+import FormDemo from './FormDemo';
+// import KeyDemo from './KeyDemo';
 // import IfDemo from './IfDemo';
 // import StateComponent from './StateComponent';
 // import LifecircleComponent from "./lifecircleComponent";
@@ -19,7 +20,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <KeyDemo />
+        <FormDemo />
+        {/*<KeyDemo />*/}
         {/*<IfDemo />*/}
         {/*<SetStateDemo />*/}
         {/*<LifecircleComponent title={this.state.title} />*/}
