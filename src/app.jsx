@@ -1,4 +1,5 @@
 import React from "react";
+import Compose from './Compose';
 import Calculator from './StateDemo/Calculator';
 // import FormDemo from './FormDemo';
 // import RefAndDom from './RefAndDom';
@@ -22,7 +23,10 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Calculator />
+        <Compose left={ <Calculator /> }>
+          <span>这个是组合</span>
+        </Compose>
+        {/*<Calculator />*/}
         {/*<FormDemo />*/}
         {/*<RefAndDom />*/}
         {/*<KeyDemo />*/}
