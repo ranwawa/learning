@@ -1,5 +1,7 @@
 import React from "react";
-import PropTypes from './PropTypes';
+import 'antd/dist/antd.css';
+import { AntdDemo } from './AntdDemo';
+// import PropTypes from './PropTypes';
 // import Compose from './Compose';
 // import Calculator from './StateDemo/Calculator';
 // import FormDemo from './FormDemo';
@@ -24,7 +26,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <PropTypes userName="你是认证" age={ 23 } sex="女"/>
+        <AntdDemo />
+        {/*<PropTypes userName="你是认证" age={ 23 } sex="女"/>*/}
         {/*<Compose left={ <Calculator /> }>*/}
         {/*  <span>这个是组合</span>*/}
         {/*</Compose>*/}
