@@ -1,6 +1,7 @@
 import React from "react";
-import Compose from './Compose';
-import Calculator from './StateDemo/Calculator';
+import PropTypes from './PropTypes';
+// import Compose from './Compose';
+// import Calculator from './StateDemo/Calculator';
 // import FormDemo from './FormDemo';
 // import RefAndDom from './RefAndDom';
 // import KeyDemo from './KeyDemo';
@@ -23,9 +24,10 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Compose left={ <Calculator /> }>
-          <span>这个是组合</span>
-        </Compose>
+        <PropTypes userName="你是认证" age={ 23 } sex="女"/>
+        {/*<Compose left={ <Calculator /> }>*/}
+        {/*  <span>这个是组合</span>*/}
+        {/*</Compose>*/}
         {/*<Calculator />*/}
         {/*<FormDemo />*/}
         {/*<RefAndDom />*/}
