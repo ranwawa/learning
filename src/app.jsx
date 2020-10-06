@@ -1,6 +1,6 @@
 import React from "react";
-import RefAndDom from './RefAndDom';
-// import FormDemo from './FormDemo';
+import FormDemo from './FormDemo';
+// import RefAndDom from './RefAndDom';
 // import KeyDemo from './KeyDemo';
 // import IfDemo from './IfDemo';
 // import StateComponent from './StateComponent';
@@ -21,8 +21,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <RefAndDom />
-        {/*<FormDemo />*/}
+        <FormDemo />
+        {/*<RefAndDom />*/}
         {/*<KeyDemo />*/}
         {/*<IfDemo />*/}
         {/*<SetStateDemo />*/}
