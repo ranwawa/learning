@@ -1,5 +1,6 @@
 import React from "react";
-import IfDemo from './IfDemo';
+import KeyDemo from './KeyDemo';
+// import IfDemo from './IfDemo';
 // import StateComponent from './StateComponent';
 // import LifecircleComponent from "./lifecircleComponent";
 // import SetStateDemo from './setStateDemo';
@@ -18,7 +19,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <IfDemo></IfDemo>
+        <KeyDemo />
+        {/*<IfDemo />*/}
         {/*<SetStateDemo />*/}
         {/*<LifecircleComponent title={this.state.title} />*/}
         {/*<div onClick={this.handleClickProps}>修改标题</div>*/}
