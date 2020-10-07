@@ -1,6 +1,7 @@
 import React from "react";
 import 'antd/dist/antd.css';
-import HashRouter from './RouterDemo/HashRouter';
+import ExactAndStrict from './RouterDemo/ExactAndStrict';
+// import HashRouter from './RouterDemo/HashRouter';
 // import RouterDemo from './RouterDemo/RouterDemo';
 // import { AntdDemo } from './AntdDemo';
 // import PropTypes from './PropTypes';
@@ -28,7 +29,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <HashRouter />
+        <ExactAndStrict />
+        {/*<HashRouter />*/}
         {/*<RouterDemo />*/}
         {/*<AntdDemo />*/}
         {/*<PropTypes userName="你是认证" age={ 23 } sex="女"/>*/}
