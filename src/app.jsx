@@ -1,6 +1,7 @@
 import React from "react";
 import 'antd/dist/antd.css';
-import NavLink from './RouterDemo/NavLink';
+import ParamsDemo from './RouterDemo/ParamsDemo';
+// import NavLink from './RouterDemo/NavLink';
 // import RenderFunction from './RouterDemo/RenderFunction';
 // import SwitchAnd404 from './RouterDemo/SwitchAnd404';
 // import ExactAndStrict from './RouterDemo/ExactAndStrict';
@@ -32,7 +33,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <NavLink />
+        <ParamsDemo />
+        {/*<NavLink />*/}
         {/*<RenderFunction />*/}
         {/*<SwitchAnd404 />*/}
         {/*<ExactAndStrict />*/}
