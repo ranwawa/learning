@@ -1,6 +1,7 @@
 import React from "react";
 import 'antd/dist/antd.css';
-import RedirectAndPush from './RouterDemo/RedirectAndPush';
+import WithRouter from './RouterDemo/WithRouter';
+// import RedirectAndPush from './RouterDemo/RedirectAndPush';
 // import ParamsDemo from './RouterDemo/ParamsDemo';
 // import NavLink from './RouterDemo/NavLink';
 // import RenderFunction from './RouterDemo/RenderFunction';
@@ -34,7 +35,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <RedirectAndPush />
+        <WithRouter />
+        {/*<RedirectAndPush />*/}
         {/*<ParamsDemo />*/}
         {/*<NavLink />*/}
         {/*<RenderFunction />*/}
