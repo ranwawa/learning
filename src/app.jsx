@@ -1,6 +1,7 @@
 import React from "react";
 import 'antd/dist/antd.css';
-import SwitchAnd404 from './RouterDemo/SwitchAnd404';
+import RenderFunction from './RouterDemo/RenderFunction';
+// import SwitchAnd404 from './RouterDemo/SwitchAnd404';
 // import ExactAndStrict from './RouterDemo/ExactAndStrict';
 // import HashRouter from './RouterDemo/HashRouter';
 // import RouterDemo from './RouterDemo/RouterDemo';
@@ -30,7 +31,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <SwitchAnd404 />
+        <RenderFunction />
+        {/*<SwitchAnd404 />*/}
         {/*<ExactAndStrict />*/}
         {/*<HashRouter />*/}
         {/*<RouterDemo />*/}
