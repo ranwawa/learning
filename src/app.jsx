@@ -1,6 +1,7 @@
 import React from "react";
 import 'antd/dist/antd.css';
-import RenderFunction from './RouterDemo/RenderFunction';
+import NavLink from './RouterDemo/NavLink';
+// import RenderFunction from './RouterDemo/RenderFunction';
 // import SwitchAnd404 from './RouterDemo/SwitchAnd404';
 // import ExactAndStrict from './RouterDemo/ExactAndStrict';
 // import HashRouter from './RouterDemo/HashRouter';
@@ -31,7 +32,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <RenderFunction />
+        <NavLink />
+        {/*<RenderFunction />*/}
         {/*<SwitchAnd404 />*/}
         {/*<ExactAndStrict />*/}
         {/*<HashRouter />*/}
