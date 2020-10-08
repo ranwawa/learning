@@ -1,6 +1,7 @@
 import React from "react";
 import 'antd/dist/antd.css';
-import NestDemo from './RouterDemo/NestDemo';
+import Store from './ReduxDemo/Store';
+// import NestDemo from './RouterDemo/NestDemo';
 // import PromptDemo from './RouterDemo/PromptDemo';
 // import WithRouter from './RouterDemo/WithRouter';
 // import RedirectAndPush from './RouterDemo/RedirectAndPush';
@@ -37,7 +38,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <NestDemo />
+        <Store />
+        {/*<NestDemo />*/}
         {/*<PromptDemo />*/}
         {/*<WithRouter />*/}
         {/*<RedirectAndPush />*/}
