@@ -1,8 +1,8 @@
 import React from 'react';
+import App from './app';
 import ReactDOM from 'react-dom';
 import { createStore } from 'redux';
-import Store from './ReduxDemo/Store';
-import App from './app';
+import { Provider } from 'react-redux';
 
 const INCREMENT = 'increment';
 const DECREMENT = 'decrement';
@@ -19,13 +19,18 @@ const reducer = (state = 0, action) => {
 }
 const store = createStore(reducer);
 
-const render = () => {
-  ReactDOM.render(<Store
-    clickIncrement={ () => store.dispatch({ type: INCREMENT })}
-    clickDecrement={ () => store.dispatch({ type: DECREMENT })}
-    value={ store.getState() }
-  />, document.getElementById('root'));
-};
-render();
-store.subscribe(() => render())
+// const render = () => {
+//   ReactDOM.render(<Store
+//     clickIncrement={ () => store.dispatch({ type: INCREMENT })}
+//     clickDecrement={ () => store.dispatch({ type: DECREMENT })}
+//     value={ store.getState() }
+//   />, document.getElementById('root'));
+// };
+// render();
+// store.subscribe(() => render())
 
+ReactDOM.render(
+  <Provider store={ store }>
+    <App />
+  </Provider>,
+  document.getElementById('root'));
