@@ -1,23 +1,14 @@
 import React from 'react';
 import App from './app';
 import ReactDOM from 'react-dom';
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import { Provider } from 'react-redux';
+import { counter, user } from './ReduxDemo/reducer';
 
-const INCREMENT = 'increment';
-const DECREMENT = 'decrement';
-const reducer = (state = 0, action) => {
-  console.log(action.type);
-  switch (action.type) {
-    case INCREMENT:
-      return state + 1;
-    case DECREMENT:
-      return state - 1;
-    default:
-      return state;
-  }
-}
-const store = createStore(reducer);
+const store = createStore(combineReducers({
+  counter,
+  user,
+}));
 
 // const render = () => {
 //   ReactDOM.render(<Store

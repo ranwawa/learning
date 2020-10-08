@@ -1,6 +1,7 @@
 import React from "react";
 import 'antd/dist/antd.css';
-import ReactRedux from './ReduxDemo/ReactRedux';
+import Bind from './ReduxDemo/bind';
+// import ReactRedux from './ReduxDemo/ReactRedux';
 // import Store from './ReduxDemo/Store';
 // import NestDemo from './RouterDemo/NestDemo';
 // import PromptDemo from './RouterDemo/PromptDemo';
@@ -39,7 +40,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <ReactRedux test="test"/>
+        <Bind />
+        {/*<ReactRedux test="test"/>*/}
         {/*<Store />*/}
         {/*<NestDemo />*/}
         {/*<PromptDemo />*/}
