@@ -1,14 +1,27 @@
 import React from 'react';
 import App from './app';
 import ReactDOM from 'react-dom';
-import { createStore, combineReducers } from 'redux';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { counter, user } from './ReduxDemo/reducer';
 
+const logger = store => next => action => {
+  console.log('打印日志', store.getState().counter);
+  const result = next(action);
+  console.log('打印日志', store.getState().counter);
+  return result;
+}
+const is5 = store => next => action => {
+  if (store.getState().counter > 5) {
+    return;
+  }
+  return next(action);
+}
 const store = createStore(combineReducers({
   counter,
   user,
-}));
+}), {}, applyMiddleware(logger, is5));
+
 
 // const render = () => {
 //   ReactDOM.render(<Store

@@ -1,6 +1,7 @@
 import React from "react";
 import 'antd/dist/antd.css';
-import Bind from './ReduxDemo/bind';
+import MiddleWare from './ReduxDemo/MiddleWare';
+// import Bind from './ReduxDemo/bind';
 // import ReactRedux from './ReduxDemo/ReactRedux';
 // import Store from './ReduxDemo/Store';
 // import NestDemo from './RouterDemo/NestDemo';
@@ -40,7 +41,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <Bind />
+        <MiddleWare />
+        {/*<Bind />*/}
         {/*<ReactRedux test="test"/>*/}
         {/*<Store />*/}
         {/*<NestDemo />*/}

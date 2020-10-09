@@ -16,6 +16,6 @@ export const user = (state = [], action) => {
       state.push('rww');
       return JSON.parse(JSON.stringify(state));
     default:
-      return  [];
+      return  ['a', 'b'];
   }
 }
