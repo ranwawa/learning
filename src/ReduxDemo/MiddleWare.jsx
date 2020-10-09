@@ -4,6 +4,12 @@
 *   - 就是在dispatch之后,先触发中间件,再改变state的值
 * 为什么需要中间件
 *   - 相当于是封装逻辑,对单个状态的改变进行统一处理,避免重复编码
+* 怎么用中间件
+*   - 通过redux引入applyMiddleware
+*   - 编写中间件函数
+*     - 函数必须是3个函数组成,第一个函数的参数是store,第2函数的参数是next,第3个函数的参数是action
+*     - 中件间函数要继续向下传,就必须return next(action)
+*   - 将applyMiddleware(中间件函数, ...)作为createStore的第3个参数传递进去,生成store即可
 * store,action,dispatch三者之间的关系
 *   - store是一个仓库,里面存放各种状态.类似于vue里面的state
 *     - 是通过createStore注入进来的
