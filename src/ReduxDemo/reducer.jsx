@@ -5,6 +5,8 @@ export const counter = (state = 0, action) => {
       return state + action.num;
     case DECREMENT:
       return state - action.num;
+    case 'loading':
+      return 'loading';
     default:
       return state;
   }
@@ -19,3 +21,4 @@ export const user = (state = [], action) => {
       return  ['a', 'b'];
   }
 }
+

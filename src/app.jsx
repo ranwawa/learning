@@ -1,6 +1,7 @@
 import React from "react";
 import 'antd/dist/antd.css';
-import MiddleWare from './ReduxDemo/MiddleWare';
+import MiddleWareAsync from './ReduxDemo/MiddleWareAsync';
+// import MiddleWare from './ReduxDemo/MiddleWare';
 // import Bind from './ReduxDemo/bind';
 // import ReactRedux from './ReduxDemo/ReactRedux';
 // import Store from './ReduxDemo/Store';
@@ -41,7 +42,8 @@ export default class App extends React.Component {
   render() {
     return (
       <div>
-        <MiddleWare />
+        <MiddleWareAsync/>
+        {/*<MiddleWare />*/}
         {/*<Bind />*/}
         {/*<ReactRedux test="test"/>*/}
         {/*<Store />*/}
