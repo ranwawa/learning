@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { counter, user } from './ReduxDemo/reducer';
+import reduxLogger from 'redux-logger';
 
 const logger = store => next => action => {
   console.log('打印日志', store.getState().counter);
@@ -20,7 +21,7 @@ const is5 = store => next => action => {
 const store = createStore(combineReducers({
   counter,
   user,
-}), {}, applyMiddleware(logger, is5));
+}), {}, applyMiddleware(logger, is5, reduxLogger));
 
 
 // const render = () => {
